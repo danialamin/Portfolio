@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoHomeFill } from "react-icons/go";
+import { IoPerson } from "react-icons/io5";
+import { HiMiniPresentationChartBar } from "react-icons/hi2";
+import { TbShare2 } from "react-icons/tb";
+import { FaStar } from "react-icons/fa";
+import { Open_Sans } from 'next/font/google'
 import "./globals.css";
+import Link from "next/link";
+
+const openSans = Open_Sans({ subsets: ['latin'], weight: '400', variable: '--font-open-sans' })
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +23,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // #3d4c41
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${openSans.variable} open-sans min-h-screen flex flex-col bg-gradient-to-bl from-[#46574a] to-[#27342a]`}>
+        <header className="flex gap-[60px] h-[65px] items-center justify-center">
+          <Link href="/"><div className="flex gap-1 items-center text-[white] text-[1.1rem]"><GoHomeFill />Home</div></Link>
+          <Link href="/about"><div className="flex gap-1 items-center text-[white] text-[1.1rem]"><IoPerson />About</div></Link>
+          <Link href="/projects"><div className="flex gap-1 items-center text-[white] text-[1.1rem]"><HiMiniPresentationChartBar />Projects</div></Link>
+          <Link href="/share"><div className="flex gap-2 items-center text-[white] text-[1.1rem] bg-shinyGreen px-2 py-2 rounded-md"><TbShare2 /><FaStar /></div></Link>
+        </header>
+        {children}
+        <footer></footer>
+      </body>
     </html>
   );
 }
