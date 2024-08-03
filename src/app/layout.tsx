@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GoHomeFill } from "react-icons/go";
-import { IoPerson } from "react-icons/io5";
-import { HiMiniPresentationChartBar } from "react-icons/hi2";
-import { TbShare2 } from "react-icons/tb";
-import { FaStar } from "react-icons/fa";
 import { Open_Sans } from 'next/font/google'
 import "./globals.css";
-import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { TbFileCertificate } from "react-icons/tb";
+import Starfield from '../components/starsBackground';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const openSans = Open_Sans({ subsets: ['latin'], weight: '400', variable: '--font-open-sans' })
 
@@ -27,23 +20,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+  
   return (
     <html lang="en">
-      <body className={`${inter.className} ${openSans.variable} open-sans min-h-screen flex flex-col bg-[black] text-white`}>
-        <header className="flex gap-[60px] h-[65px] items-center justify-center">
-          <Link href="/"><div className="flex gap-1 items-center text-[white] text-[1.1rem] border-b-2 border-transparent hover:border-shinyGreen transition-all duration-300"><GoHomeFill />Home</div></Link>
-          <Link href="/about"><div className="flex gap-1 items-center text-[white] text-[1.1rem] border-b-2 border-transparent hover:border-shinyGreen transition-all duration-300"><IoPerson />About</div></Link>
-          <Link href="/projects"><div className="flex gap-1 items-center text-[white] text-[1.1rem] border-b-2 border-transparent hover:border-shinyGreen transition-all duration-300"><HiMiniPresentationChartBar />Projects</div></Link>
-          <Link href="/certificates"><div className="flex gap-1 items-center text-[white] text-[1.1rem] border-b-2 border-transparent hover:border-shinyGreen transition-all duration-300"><TbFileCertificate />Certifications</div></Link>
-          <Link href="https://github.com/danialamin/Portfolio" target="_blank"><div className="flex gap-2 items-center text-[white] text-[1.1rem] bg-shinyGreen px-2 py-2 rounded-md"><TbShare2 /><FaStar /></div></Link>
-        </header>
-        {children}
-        <footer className="bg-darkGreen">
-          <Link href="https://github.com/danialamin" target="_blank" className=""><FaGithub/></Link>
-          <Link href="https://www.linkedin.com/in/danial-amin-a9796b1b2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBKEcCjtaQWatVHXtyCldmA%3D%3D" target="_blank"><FaLinkedin/></Link>
-          <Link href="https://x.com/amin_dania40798" target="_blank"><FaXTwitter /></Link>
-        </footer>
+      <body className={`${inter.className} ${openSans.variable} open-sans min-h-[150vh] flex flex-col bg-[black] text-white`}>
+        <Header />
+        {children}  
+        <Footer />
       </body>
+      <Starfield starCount={1000} starColor={[255, 255, 255]} speedFactor={0.05} backgroundColor="black"/>
     </html>
   );
 }
