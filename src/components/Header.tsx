@@ -16,17 +16,19 @@ const Header = () => {
   // header will only have bg color if scrolled
   const headerRef = useRef<HTMLDivElement>(null);
 
-  window.addEventListener('scroll', () => {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;  
-    
-    if (headerRef.current) {
-    if (scrollPosition > 0) {
-      headerRef.current.classList.add('scrolled');
-    } else {
-      headerRef.current.classList.remove('scrolled');
-    }
-    }
-  })
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;  
+      
+      if (headerRef.current) {
+      if (scrollPosition > 0) {
+        headerRef.current.classList.add('scrolled');
+      } else {
+        headerRef.current.classList.remove('scrolled');
+      }
+      }
+    })
+  }
 
   // state for mobile menu
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +37,7 @@ const Header = () => {
   function handleClick() {
     setMenuOpen((prev) => !prev);
   }
-// bg-[#502863] hover:bg-[#643679]
+
   return (
     <header className="flex breakpoint720:gap-[60px] h-[65px] items-center fixed w-full pl-[25%] z-[10] max-breakpoint910:pl-[5%] max-breakpoint720:pl-0 max-breakpoint720:justify-between shadow-2xl" ref={headerRef}>
       <p className="text-[1.2rem] breakpoint720:hidden font-bold font-sans ml-[20px] z-[99]">DA</p>
