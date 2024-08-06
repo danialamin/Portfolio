@@ -1,3 +1,4 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
@@ -11,6 +12,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -21,14 +23,18 @@ const config: Config = {
       colors: {
         lightPurple: '#C95EFB',
         darkGreen: '#002E20',
+        iconColor: '#700c86'
       }
     },
     screens: {
       breakpoint910: "910px",
-      breakpoint720: "720px"
+      breakpoint720: "720px",
+      sm: '640px',
+      md: '768px',
+      lg: '1024px'
     }
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors,nextui()],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {

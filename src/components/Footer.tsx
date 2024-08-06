@@ -6,10 +6,18 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#080110] flex justify-center items-center gap-[12px] h-[40px] py-2">
-      <Link href="https://github.com/danialamin" target="_blank" className=""><FaGithub size={25} /></Link>
-      <Link href="https://www.linkedin.com/in/danial-amin-a9796b1b2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBKEcCjtaQWatVHXtyCldmA%3D%3D" target="_blank"><FaLinkedin size={25} /></Link>
-      <Link href="https://x.com/amin_dania40798" target="_blank"><FaXTwitter size={25} /></Link>
+    <footer className="bg-[#080110] flex justify-between items-center min-h-[40px] py-4 max-breakpoint720:flex-col sm:px-20 max-breakpoint720:gap-2">
+      <div className='text-center'>
+        Designed by Danial Amin
+      </div>
+      <div className='text-center'>
+        Copyright © 2024
+      </div>
+      <div className='flex gap-[12px]'>
+        <Link href="https://github.com/danialamin" target="_blank"><FaGithub size={20} /></Link>
+        <Link href="https://www.linkedin.com/in/danial-amin-a9796b1b2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBKEcCjtaQWatVHXtyCldmA%3D%3D" target="_blank"><FaLinkedin size={20} /></Link>
+        <Link href="https://x.com/amin_dania40798" target="_blank"><FaXTwitter size={20} /></Link>
+      </div>
     </footer>
   )
 }

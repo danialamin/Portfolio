@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Open_Sans } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
 import Starfield from '../components/starsBackground';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const openSans = Open_Sans({ subsets: ['latin'], weight: '400', variable: '--font-open-sans' })
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], weight: '400', variable: '--font-plus-jakarta-sans' })
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,12 +24,12 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={`${inter.className} ${openSans.variable} open-sans min-h-[150vh] flex flex-col bg-[black] text-white`}>
+      <body className={`${inter.className} ${plusJakartaSans.variable} plus-jakarta-sans min-h-[150vh] flex flex-col bg-[black] text-white`}>
         <Header />
         {children}  
         <Footer />
+        <Starfield starCount={1000} starColor={[255, 255, 255]} speedFactor={0.05} backgroundColor="black"/>
       </body>
-      <Starfield starCount={1000} starColor={[255, 255, 255]} speedFactor={0.05} backgroundColor="black"/>
     </html>
   );
 }
