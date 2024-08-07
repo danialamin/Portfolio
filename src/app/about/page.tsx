@@ -21,7 +21,7 @@ const page = () => {
       <div className='w-[min(100%,1100px)] mt-[170px] flex flex-col items-center gap-[70px] text-center'>
         <div className='flex flex-col text-left'>
           <h1 className='text-center text-3xl'>About <span className='text-lightPurple'>Me</span></h1>
-          <div className='mt-[45px] flex flex-col gap-[15px]'>
+          <div className='mt-[45px] flex flex-col gap-[15px] px-[9px]'>
             <p className='text-[0.98rem] tracking-tight leading-[1.5em]'>Based in Islamabad, I am a First Year student, pursuing a Bachelor&apos;s in Computer Science from <span>FAST-NUCES</span></p>
             <p className='text-[0.98rem] tracking-tight leading-[1.5em]'>My journey in Computer Science began at the age of 14, creating GUIs and scraping the web with Python. However, I ran into trouble when a limited knowledge of HTML & CSS stopped me from scraping websites effectively. This led me to delve into Web Development, at first with the aim of learning enough to increase my scraping prowess. But as time passed, I fell in love with web development and adopted it as a full time passion. As of now, I am an extremely talented Full Stack Developer with a wide range of skills. Web Development also acted as a gateway for me to transition into App Development. (I also topped my province in O&apos;level Maths during the same time)</p>
             <p className='text-[0.98rem] tracking-tight leading-[1.5em]'>As with most people in the tech industry, my interest in AI and Machine Learning peaked after ChatGPT was released in 2022. With my passion compounding every day, as I realized more and more about the potentials of this field in creating impact in the lives of people from every sector and tackling climate change.</p>
