@@ -12,17 +12,17 @@
 }
 
 .home-social-icons {
-  
-  position: relative !important;
-  display: inline-block !important;
-  width: 40px !important;
-  height: 40px !important;
-  text-align: center !important;
-  font-size: 1.2em !important;
-  line-height: 2em !important;
-  background: rgba(255, 255, 255, 0.972) !important;
-  border-radius: 50% !important;
-  transition: 0.5s !important;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+  background: rgba(255, 255, 255, 0.972);
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 50;
 }
 
 .home-social-icons::before {
@@ -48,4 +48,11 @@
   color: #87209e;
   box-shadow: 0 0 5px #87209e;
   text-shadow: 0 0 2px #87209e;
+}
+
+.hoverBgEffect:hover {
+  color: #87209e;
+  box-shadow: 5px 5px 5px #87209e;
+  text-shadow: 5px 5px 5px #87209e;
+  transform: translateY(-3px);
 }

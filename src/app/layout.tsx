@@ -24,12 +24,12 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={`${inter.className} ${plusJakartaSans.variable} plus-jakarta-sans min-h-[150vh] flex flex-col bg-[black] text-white`}>
+      <body className={`${inter.className} ${plusJakartaSans.variable} plus-jakarta-sans min-h-[155vh] flex flex-col bg-[black] text-white`}>
         <Header />
         {children}  
         <Footer />
-        <Starfield starCount={1000} starColor={[255, 255, 255]} speedFactor={0.05} backgroundColor="black"/>
       </body>
+      <Starfield starCount={2000} starColor={[255, 255, 255]} speedFactor={0.05} backgroundColor="black"/>
     </html>
   );
 }

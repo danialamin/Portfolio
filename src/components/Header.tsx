@@ -39,7 +39,7 @@ const Header = () => {
   }
 
   return (
-    <header className="flex breakpoint720:gap-[60px] h-[65px] items-center fixed w-full pl-[25%] z-[10] max-breakpoint910:pl-[5%] max-breakpoint720:pl-0 max-breakpoint720:justify-between shadow-2xl" ref={headerRef}>
+    <header className="flex breakpoint720:gap-[60px] h-[65px] items-center fixed w-full pl-[25%] z-[100] max-breakpoint910:pl-[5%] max-breakpoint720:pl-0 max-breakpoint720:justify-between shadow-2xl" ref={headerRef}>
       <p className="text-[1.2rem] breakpoint720:hidden font-bold font-sans ml-[20px] z-[99]">DA</p>
       <Link href="/"><div className="flex gap-1 items-center text-[white] text-[1.1rem] border-b-2 border-transparent hover:border-lightPurple transition-all duration-300 max-breakpoint720:hidden"><GoHomeFill />Home</div></Link>
       <Link href="/about"><div className="flex gap-1 items-center text-[white] text-[1.1rem] border-b-2 border-transparent hover:border-lightPurple transition-all duration-300 max-breakpoint720:hidden"><IoPerson />About</div></Link>

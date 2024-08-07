@@ -6,11 +6,11 @@ import { FaGithub } from "react-icons/fa";
 
 const Card = (imageName: string, name: string, image: string, description: string, gitHubLink: string, liveLink: string|null) => {
   return (
-    <div className={`w-[min(370px,100%)] h-[250px] px-[20px] pt-[40px] border-[1px] border-white relative group`}>
+    <div className={`w-[min(370px,100%)] h-[250px] px-[20px] pt-[40px] z-[50] border-[1px] border-white relative group`}>
       <div className='absolute top-0 left-0 w-full h-full'>
         <Image src={image} alt={name} height={250} width={370} />
       </div>
-      <div className='absolute top-0 left-0 w-full h-full bg-[#080110] opacity-10 group-hover:opacity-80 transition-all duration-300 z-[1]'></div>
+      <div className='absolute top-0 left-0 w-full h-full bg-[#080110] opacity-10 group-hover:opacity-90 transition-all duration-300 z-[1]'></div>
 
       <div className='hidden group-hover:flex flex-col z-[2]'>
         <div className='w-full flex justify-between items-center z-[2]'>
