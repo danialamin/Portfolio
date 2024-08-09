@@ -44,23 +44,25 @@ const Header = () => {
       setMenuOpen(false);
     }
   }
-  document.addEventListener('keydown', handleEsc);
-
+  if (typeof(document) !== undefined) {
+    document.addEventListener('keydown', handleEsc);
+  }
   // pressing anywhere outside the mobile menu will set menuOpen to false
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-        if (menuOpen && !menuRef.current?.contains(event.target as Node)) {
-            setMenuOpen(false);
-        }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-    };
-    }, [menuOpen, menuRef]);
+    if (typeof window !== 'undefined') {
 
+      const handleClickOutside = (event: MouseEvent) => {
+          if (menuOpen && !menuRef.current?.contains(event.target as Node)) {
+              setMenuOpen(false);
+          }
+      };
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+    }}
+    }, [menuOpen, menuRef]);
   return (
     <header className="flex breakpoint720:gap-[60px] h-[65px] items-center fixed w-full pl-[25%] z-[100] max-breakpoint910:pl-[5%] max-breakpoint720:pl-0 max-breakpoint720:justify-between shadow-2xl" ref={headerRef}>
       <p className="text-[1.2rem] breakpoint720:hidden font-bold font-sans ml-[20px] z-[99]">DA</p>
