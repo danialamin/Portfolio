@@ -1,4 +1,5 @@
 import Card from "@/components/Card"
+import ImageSlide from "@/components/ImageSlide"
 
 const page = () => {
   const WebDevProjectsData = [
@@ -54,13 +55,14 @@ const page = () => {
   ]
 
   return (
-    <div className="grow flex justify-center text-center">
+    <div className="grow flex flex-col justify-center items-center text-center">
       <div className="py-[150px] w-[min(100%,1100px)] flex flex-col gap-10 px-3">
         <h1 className="text-[36px]">Recent <span className="text-lightPurple">Projects</span></h1>
         <div className="flex justify-center flex-wrap gap-6">
           {WebDevProjectsData.map((project) => Card(project.imageName, project.name, project.image, project.description, project.githubLink, project.liveLink))}
         </div>
       </div>
+      <ImageSlide />
     </div>
   )
 }

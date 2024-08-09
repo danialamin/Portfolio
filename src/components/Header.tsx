@@ -4,7 +4,6 @@ import Link from "next/link";
 import { GoHomeFill } from "react-icons/go";
 import { IoPerson } from "react-icons/io5";
 import { HiMiniPresentationChartBar } from "react-icons/hi2";
-import { TbShare2 } from "react-icons/tb";
 import { FaStar } from "react-icons/fa";
 import { TbFileCertificate } from "react-icons/tb";
 import { useEffect, useRef, useState } from "react";
