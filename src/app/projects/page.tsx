@@ -1,5 +1,4 @@
 import Card from "@/components/Card"
-import ImageSlide from "@/components/ImageSlide"
 
 const page = () => {
   const WebDevProjectsData = [
@@ -62,7 +61,6 @@ const page = () => {
           {WebDevProjectsData.map((project) => Card(project.imageName, project.name, project.image, project.description, project.githubLink, project.liveLink))}
         </div>
       </div>
-      <ImageSlide />
     </div>
   )
 }
