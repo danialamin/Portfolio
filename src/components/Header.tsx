@@ -44,7 +44,7 @@ const Header = () => {
       setMenuOpen(false);
     }
   }
-  if (typeof window !== undefined) {
+  if (typeof window !== 'undefined') {
     document.addEventListener('keydown', handleEsc);
   }
   // pressing anywhere outside the mobile menu will set menuOpen to false
