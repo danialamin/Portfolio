@@ -44,14 +44,14 @@ const Header = () => {
       setMenuOpen(false);
     }
   }
-  if (typeof document !== undefined) {
+  if (typeof window !== undefined) {
     document.addEventListener('keydown', handleEsc);
   }
   // pressing anywhere outside the mobile menu will set menuOpen to false
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
+    if (typeof window !== 'undefined') {
 
       const handleClickOutside = (event: MouseEvent) => {
           if (menuOpen && !menuRef.current?.contains(event.target as Node)) {
